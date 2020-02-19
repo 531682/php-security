@@ -39,7 +39,7 @@ if (isset($_POST['bool']) == 'bool')
 } 
 
  // Veld4
-if (isset($_POST['file']) && $_POST['file'] != null) 
+if (isset($_POST['file']) && $_POST['file'] != null)
 { 
     $file = $_POST['file'];
     echo "<br>";
