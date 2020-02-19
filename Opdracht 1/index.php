@@ -1,12 +1,14 @@
 <?php
 if(isset($_POST['submit'])){
- $expected = array(
-     'veld1'=>'string', 
-     'veld2'=>'int', 
-     'veld3'=>'boolean', 
-     'veld4'=>'filename'
+    $expected = array(
+        'veld1'=>'string', 
+        'veld2'=>'int', 
+        'veld3'=>'boolean', 
+        'veld4'=>'filename'
     );
-
+    
+ // Controleer hier de vier velden van het formulier op de verschillende tests
+ // Veld1
 if (isset($_POST['string']) && $_POST['string'] != null) 
 { 
     echo "<br>";
@@ -16,6 +18,7 @@ if (isset($_POST['string']) && $_POST['string'] != null)
     echo "string: FALSE"; 
 } 
 
+ // Veld2
 if (isset($_POST['int']) && $_POST['int'] != null) 
 { 
     echo "<br>"; 
@@ -25,6 +28,7 @@ if (isset($_POST['int']) && $_POST['int'] != null)
     echo "int: FALSE"; 
 } 
 
+ // Veld3
 if (isset($_POST['bool']) == 'bool') 
 { 
     echo "<br>";
@@ -34,6 +38,7 @@ if (isset($_POST['bool']) == 'bool')
     echo "checkbox: FALSE";
 } 
 
+ // Veld4
 if (isset($_POST['file']) && $_POST['file'] != null) 
 { 
     $file = $_POST['file'];
@@ -44,11 +49,9 @@ if (isset($_POST['file']) && $_POST['file'] != null)
     echo "file: FALSE";
 }
 
- // Controleer hier de vier velden van het formulier op de verschillende tests
- // Veld1
- // Veld2
- // Veld3
- // Veld4
+
+
+
  /*      NB Veld4 heeft speciale voorwaarden:
  //      - Maximaal 64 characters
  //      - Geen speciale characters (slashes omzetten naar alternatief)
