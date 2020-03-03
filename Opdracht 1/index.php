@@ -31,7 +31,8 @@ if (isset($_POST['int']) &&
     !empty($_POST['int']) && 
     is_numeric($_POST['int']) && 
     ctype_digit($_POST['int']) && 
-    !is_null($_POST['int'])
+    !is_null($_POST['int']) &&
+    !is_float($_POST['int'])
     ) 
 { 
     echo "<br>"; 
@@ -72,10 +73,7 @@ if (isset($_POST['file']) &&
 
 
 // is_bool($_POST['']);
-
 // is_float($_POST['']);
-// 
-// 
 // is_object($_POST['']);
 // is_array($_POST['']);
 
